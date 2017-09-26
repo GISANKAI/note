@@ -24,9 +24,10 @@
 <script>
     'use strict'
     $(function () {
-        $.get("./README.md", function (response, status, xhr) {
+        $.get("./mainAM.md", function (response, status, xhr) {
             $("nav").html(marked(response));
         });
+
         // $.get("./README.md", function (response, status, xhr) {
         //     $("#content").html(marked(response));
         // });
