@@ -16,7 +16,7 @@
     <!--左侧导航-->
     <nav>
         <ul>
-            <li>hhhhhh</li>
+            <li><a href="./chapter/software_developer/index.html">软件设计师</li>
         </ul>
     </nav>
     <div id="content">
@@ -26,6 +26,9 @@
 <script>
     'use strict'
     $(function () {
+        //设置链接打开方式为本页打开
+        $('nav ul a').attr('target','_self');
+        //设置右边主页面
         $.get("./README.md", function (response, status, xhr) {
             $("#content").html(marked(response));
         });
