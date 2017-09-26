@@ -1,11 +1,19 @@
+body{
+    background: #877f6a;
+}
 nav{
     margin: 2px;
     float: left;
     width: 23%;
     background: #111111;
-    color: #afa790;
+    color: #877f6a;
+}
+nav a{
+    text-decoration: none;
 }
 #content{
     width: 75%;
     float: right;
+    background: #f3eacb;
+    color: #704214;
 }
