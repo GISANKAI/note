@@ -1,5 +1,5 @@
 body{
-    background: #877f6a;
+    background: #E4E3E1;
 }
 nav{
     margin: 2px;
@@ -12,8 +12,9 @@ nav a{
     text-decoration: none;
 }
 #content{
-    width: 75%;
-    float: right;
+    margin: 5px;
+    width: 70%;
+    float: left;
     background: #f3eacb;
     color: #704214;
 }
