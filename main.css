@@ -5,7 +5,7 @@ nav{
     margin: 2px;
     float: left;
     width: 23%;
-    background: #111111;
+    background: #2E2E2E;
     color: #877f6a;
 }
 nav a{
@@ -13,7 +13,7 @@ nav a{
 }
 #content{
     margin: 5px;
-    width: 70%;
+    width: 100%;
     float: left;
     background: #f3eacb;
     color: #704214;
