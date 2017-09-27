@@ -40,8 +40,10 @@
         $.get("./mainAM.md", function (response, status, xhr) {
             $("nav").html(marked(response));
         });
-        $("nav h3:eq(0)").one('click',function(){
+        $("nav h3:eq(0)").on('click',function(){
             $.get("./chapter1.md", function (response, status, xhr) {
+                console.log(status);
+                console.log(xhr);
                 console.log(response);
             $("#content").html(marked(response));
         });
