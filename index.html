@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./main.css">
-
-    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- zui -->
+    <link rel="stylesheet" href="./plugin/zui/css/zui.min.css">
+    <script src="./plugin/zui/js/zui.min.js"></script>
     <!--markdown-->
     <script src="./js/marked.js"></script>
     <!--jq-->
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 自定义css -->
+    <link rel="stylesheet" href="./main.css">
     <title>welcome</title>
 </head>
 
 <body class="container-fluid">
-    
     <div class="row">
         <!--左侧导航-->
         <nav class="col-lg-2">
@@ -35,7 +35,7 @@
     'use strict'
     $(function () {
         //设置链接打开方式为本页打开
-        $('nav ul a').attr('target','_self');
+        $('nav ul a').attr('target', '_self');
         //设置右边主页面
         $.get("./README.md", function (response, status, xhr) {
             $("#content").html(marked(response));
