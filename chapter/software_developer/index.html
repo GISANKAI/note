@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../main.css">
     <!--markdown-->
     <script src="../../js/marked.js"></script>
-    
+
     <title>Document</title>
 </head>
 
@@ -40,14 +40,14 @@
         $.get("./mainAM.md", function (response, status, xhr) {
             $("nav").html(marked(response));
         });
-        $("nav h3:eq(0)").on('click',function(){
+        $("nav h3:eq(0)").on('click', function () {
             console.log(3);
             $.get("./chapter1.md", function (response, status, xhr) {
                 console.log(2);
-            $("#content").html(marked(response));
-        });
+                $("#content").html(marked(response));
+            });
         })
-        
+
         console.log(1);
     });
 </script>
