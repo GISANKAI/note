@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +16,21 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <!--左侧导航-->
-    <nav>
-        <ul>
-            <li>hhhhhh</li>
-        </ul>
-    </nav>
-    <div id="content">
 
+<body class="container-fluid">
+
+    <div class=" row">
+        <!--左侧导航-->
+        <nav class=" col-lg-3">
+            <ul>
+                <li>hhhhhh</li>
+            </ul>
+        </nav>
+        <!--右侧-->
+        <div class=" col-lg-9">
+            <div id="content">
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -38,4 +45,5 @@
         console.log(1);
     });
 </script>
+
 </html>
