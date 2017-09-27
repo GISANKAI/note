@@ -36,20 +36,27 @@
 </body>
 <script>
     'use strict'
+    var navs;
     $(function () {
         $.get("./mainAM.md", function (response, status, xhr) {
+            // 填充nav
             $("nav").html(marked(response));
+            // 绑定nav事件
+            navs = $("nav h3");
+            console.log(navs.length);
+            for (var i = 0, length = navs.length; i < length; i++) {
+                bindContent(i);
+            }
         });
-        $("nav h3:eq(0)").on('click', function () {
-            console.log(3);
-            $.get("./chapter1.md", function (response, status, xhr) {
-                console.log(2);
-                $("#content").html(marked(response));
-            });
-        })
-
-        console.log(1);
     });
+
+    function bindContent(i) {
+        $(navs.get(i)).on('click', function () {
+                $.get("./chapter" + (i + 1) + ".md", function (response, status, xhr) {
+                    $("#content").html(marked(response));
+                });
+        })
+    }
 </script>
 
 </html>
