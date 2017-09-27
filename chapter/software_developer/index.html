@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- zui -->
+    <link rel="stylesheet" href="./plugin/zui/css/zui.min.css">
+    <script src="./plugin/zui/js/zui.min.js"></script>
+    <!-- 自定义css -->
     <link rel="stylesheet" href="../../main.css">
     <!--markdown-->
     <script src="../../js/marked.js"></script>
@@ -27,6 +31,9 @@
     $(function () {
         $.get("./mainAM.md", function (response, status, xhr) {
             $("nav").html(marked(response));
+        });
+        $.get("./chapter1.md", function (response, status, xhr) {
+            $("nav h3:nth-child(1)").html(marked(response));
         });
         console.log(1);
     });
